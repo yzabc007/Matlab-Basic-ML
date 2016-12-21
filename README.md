@@ -8,3 +8,5 @@ The emphases of the project would be the implementation of those algorithms usin
 For now, the main categories include classification (Bayes classifier, Perceptron, SVM, Linear Regression), PCA, Kernel, simple Neural Networks, clustering, decision tree and ensemble learning.
 
 The categories might be confusing but I will revise them on the process of coding.
+
+The purpose of this little project is to implement the most basic principle of those algorithms using Matlab, but without using existing functions from powerful Matlab.
