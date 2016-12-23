@@ -13,7 +13,7 @@ if boolNormEq ~= true
 		if sum(abs(targets-activations)) ~= 0
 			weights = weights + eta * inputs' * (targets-activations);
 		else
-			fprintf(['Finish convergence  ...' num2str(i) ' \n']);
+			fprintf(['Finish convergence  at ' num2str(i) ' \n']);
 			break;
 		end
 	end
