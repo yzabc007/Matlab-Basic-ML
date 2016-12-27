@@ -55,9 +55,9 @@ $g(x)=\frac{1}{1+e^{-x}}$ and $g'(x)=g(x)(1-g(x))$.
 
 Step 1: \textbf{Going forward}
 \begin{gather}
-  h_j = \sum_j x_i\cdot v_{ij}\\
+  h_j = \sum_i x_i\cdot v_{ij}\\
   a_j = g(h_j)\\
-  b_k = \sum_k a_j\cdot w_{jk}\\
+  b_k = \sum_j a_j\cdot w_{jk}\\
   y_k = g(b_k)
 \end{gather}
 
