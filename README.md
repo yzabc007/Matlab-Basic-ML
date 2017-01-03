@@ -9,5 +9,9 @@ For now, the main categories include supervised learning: linear regression, cla
 
 * Part 1: Perceptron
 
-This part implements typical perceptron, linear regression, logistic regression on the same framework of Perceptron. Regularized linear regression, Regularized logistic regression, mutil-classification logistic regression will be added.
+ This part implements typical perceptron, linear regression, logistic regression on the same framework of Perceptron. Regularized linear regression, Regularized logistic regression, mutil-classification logistic regression will be added.
+
+* Part 2: Multi Perceptron
+
+ This part implements multi perceptron for multi classification. 
 
