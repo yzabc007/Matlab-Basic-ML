@@ -5,7 +5,7 @@ Those algorithms will build a solid foundations for rookies in Machine Learning 
 
 The emphases of the project would be the implementation of those algorithms using Matlab and I would add necessary equations and explanations on the annotations. 
 
-For now, the main categories include supervised learning: linear regression, classification (Bayes, kNN, SVM, kernel, decision tree); Unsupervised learning: clustering; PCA, SVD; Perceptron and MLP.
+For now, the main categories include supervised learning: linear regression, classification (Bayes, kNN, SVM, kernel, decision tree); Unsupervised learning: clustering; PCA; Perceptron and MLP.
 
 * Part 1: Perceptron
 
