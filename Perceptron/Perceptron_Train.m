@@ -1,5 +1,5 @@
 function [weights, varargout] = Perceptron_Train(inputs, targets, varargin)
-	inputs = [-ones(size(inputs, 1), 1) inputs];
+	inputs = [ones(size(inputs, 1), 1) inputs];
 	IsNormEq = false;
 	GradDes = false;
 	%% Control input arguments
@@ -29,10 +29,9 @@ function [weights, varargout] = Perceptron_Train(inputs, targets, varargin)
 		m = length(targets);
 		weights = zeros(size(inputs, 2), 1);
 		for i = 1:Iter
-			activations = ActivationFunc(OutType, inputs, weights);
-			Cost_Func(i) = sum((activations - targets).^2)/2/m;
-			weights = weights + eta * inputs' * (targets - activations)/m;
-			%fprintf(['Iteration: ' num2str(i) ' Error: ' num2str(Cost_Func(i)) '\n']);
+			[Cost_Func(i), grad] = CostFunc(OutType, weights, inputs, targets); 
+			weights = weights - eta * grad;
+			%fprintf(['Iteration: ' num2str(i) ' Cost: ' num2str(Cost_Func(i)) '\n']);
 			if Cost_Func(i) == 0 % or set a stopping threshold
 				fprintf(['Finish convergence  ...' num2str(i) ' \n']);
 				break;
@@ -48,7 +47,7 @@ function [weights, varargout] = Perceptron_Train(inputs, targets, varargin)
 	end
 	%% Normal Equation Method
 	if IsNormEq == true
-		fprintf([char(OutType) ': Normal Equation.']);
+		fprintf([char(OutType) ': Normal Equation. \n']);
 		weights = pinv(inputs' * inputs) * inputs' * targets;
 	end
 end
