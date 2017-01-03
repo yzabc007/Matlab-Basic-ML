@@ -9,11 +9,11 @@ In the file of main_MLP.m, the main job is to preprocess the data which is cruci
 
 * MLP_Train.m 
  
-I first categorize the lable and then use standard back-propagation algorithm (there are some variants of standard back-propagation that will be added) to update the weights.
+ I first categorize the lable and then use standard back-propagation algorithm (there are some variants of standard back-propagation that will be added) to update the weights.
 
 * MLP_Predict.m
 
-I use a hard-max output criteria to predict the class. Then confusion matrix and ROC curve are generated for better judgement of the classifier.
+ I use a hard-max output criteria to predict the class. Then confusion matrix and ROC curve are generated for better judgement of the classifier.
 
 According to the experiments, the initialization of weights, preprocessing of the data and the number of nodes of hidden layer are crucial for the performance of MLP including the convergence rate and the accuracy.
 
