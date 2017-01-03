@@ -1,3 +1,4 @@
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 # Perceptron
 
 The idea of Perceptron can be applied into Linear Regression and Logistic Regression and the differences between typical Perceptron, Linear regression and logistic regression are the activation function and cost function.
@@ -13,3 +14,6 @@ The derivation for this cost function is exactly the same as the derivation of s
 ![equation](http://www.sciweavers.org/tex2img.php?eq=%5Cfrac%7B%5Cpartial%20J%28%5Ctheta%29%7D%7B%5Cpartial%20%5Ctheta_j%7D%3D%5Cfrac%7B1%7D%7Bm%7D%5Csum_%7Bi%3D1%7D%5E%7Bm%7D%20%28h_%7B%5Ctheta%7D%28x%5E%7B%28i%29%7D%29-y%5E%7B%28i%29%7D%29x_j%5E%7B%28i%29%7D&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0)
 
 Notice, this cost function is designed for binary classfication with lable of 1 and 0.  
+\begin{equation}
+x_i
+\end{equation}
