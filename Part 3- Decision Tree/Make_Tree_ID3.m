@@ -50,7 +50,7 @@ function tree = Make_Tree_ID3(data, labels, featureNames)
 			NewLabels = labels(Index_Curr_Value);
 			
 			fprintf(['Recursive calling at value = ' num2str(values(i)) ' \n']);
-			subtree = Make_Tree(NewData, NewLabels, NewFeatureName);
+			subtree = Make_Tree_ID3(NewData, NewLabels, NewFeatureName);
 			s = ['tree.child' num2str(values(i)) '= subtree;'];
 			eval(s);
 			tree;
