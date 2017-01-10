@@ -20,13 +20,25 @@ function [Index_centroids, k_centroids, error_dist, num_Iter] = kMeans(k, data)
 		for i = 1:k
 			this_centroid = (Index_centroids == i);
 			if sum(this_centroid) > 0
-				k_centroids(i,:) = sum(data.*repmat(this_centroid, 1, size(data,2)), 1) ./ sum(this_centroid);
+				%% mean
+				%k_centroids(i,:) = sum(data.*repmat(this_centroid, 1, size(data,2)), 1) ./ sum(this_centroid);
+				%% median
+				data_this_centroid = data(this_centroid, :);
+				k_centroids(i,:) = FindMedianMultiDim(data_this_centroid);
 			end
 		end
 		Index_centroids_old = Index_centroids;
 		error_dist(num_Iter) = sum(sum(dist(data, k_centroids')));
 		%fprintf(['Distance error = ' num2str(error_dist(num_Iter)) '.\n']);
 	end
-	
+end
 
+function median = FindMedianMultiDim(data_matrix)
+	%% samples * dims 
+	num_data = size(data_matrix, 1);
+	dist_withOtherPts = zeros(1, num_data);
+	distance_matrix = dist(data_matrix');
+	distance_sum = sum(distance_matrix, 2);
+	median = data_matrix(find(distance_sum == min(distance_sum)),:);
+	median = median(1,:);
 end
