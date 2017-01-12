@@ -39,6 +39,23 @@ labels = [	1;
 		4;
 		1;
 		2];
+featureNames = {'Day', 'Outlook',   'Temperature',  'Humidity', 	'Wind'};
 
+data{1} = {     'D1', 'Sunny',      'Hot',          'High',     	'Weak'};
+data{2} = {     'D2', 'Sunny',      'Hot',          'High',     	'Strong'};
+data{3} = {     'D3', 'Overcast',   'Hot',          'High',     	'Weak'};
+data{4} = {     'D4', 'Rain',       'Mild',         'High',     	'Weak'};
+data{5} = {     'D5', 'Rain',       'Cool',         'Normal',     	'Weak'};
+data{6} = {     'D6', 'Rain',       'Cool',         'Normal',     	'Strong'};
+data{7} = {     'D7', 'Overcast',   'Cool',         'Normal',     	'Strong'};
+data{8} = {     'D8', 'Sunny',      'Mild',         'High',     	'Weak'};
+data{9} = {     'D9', 'Sunny',      'Cool',         'Normal',     	'Weak'};
+data{10} = {    'D10', 'Rain',      'Mild',         'Normal',     	'Weak'};
+data{11} = {    'D11', 'Sunny',     'Mild',         'Normal',     	'Strong'};
+data{12} = {    'D12', 'Overcast',  'Mild',         'High',     	'Strong'};
+data{13} = {    'D13', 'Overcast',  'Hot',          'Normal',     	'Weak'};
+data{14} = {    'D14', 'Rain',      'Mild',         'High',     	'Strong'};
+
+    
 featureNames = {'Deadline', 'Party', 'Lazy'};
 tree = Make_Tree_ID3(data, labels, featureNames);
